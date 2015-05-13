@@ -1,4 +1,5 @@
 class Api::V1::SessionsController < Api::V1::BaseController
+	include Authenticable
 	before_action :authenticate, only: [:destroy]
 
 	def create
