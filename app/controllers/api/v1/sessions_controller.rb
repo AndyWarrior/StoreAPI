@@ -7,7 +7,7 @@ class Api::V1::SessionsController < Api::V1::BaseController
 		user_password = params[:password]
 		user = User.find_by(email: user_email)
 
-		if user && user.valid_password? (user_password)
+		if user and user.valid_password? (user_password) then
 			sign_in user, store: false
 			render json: user, status: 201
 		else
