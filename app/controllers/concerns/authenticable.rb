@@ -16,6 +16,6 @@ module Authenticable
 	end
 	
 	def current_user
-		@current_user ||= authenticate_with_http_token
+		@current_user ||= authenticate_with_token
 	end
 end

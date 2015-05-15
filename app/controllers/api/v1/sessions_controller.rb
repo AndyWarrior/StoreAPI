@@ -16,7 +16,7 @@ class Api::V1::SessionsController < Api::V1::BaseController
 	end
 
 	def destroy
-		current_user.generate_auth_token
+		current_user.generate_authentication_token!
 		current_user.save
 		head 204
 	end
