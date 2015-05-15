@@ -1,4 +1,9 @@
 class Api::V1::ProductsController < Api::V1::BaseController
+	
+	include Authenticable
+	
+	before_action :authenticate
+	
 	def index
 		products = Product.all
 
