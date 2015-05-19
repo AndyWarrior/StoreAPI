@@ -4,6 +4,7 @@ Rails.application.routes.draw do
     api_version(:module => "V1", :header => {:name => "Accept", :value => "application/vnd.list.com+json; version=1"}, :defaults => {:format => :json}, :default => true) do
       resources :products, except: [:new, :edit]
 
+      resources :orders, except: [:edit, :destroy]
       #Sessions handling
       post "sign_in" => "sessions#create"
       delete "sign_out" => "sessions#destroy"

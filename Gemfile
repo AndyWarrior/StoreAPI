@@ -40,6 +40,8 @@ gem 'rspec'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
+gem 'rspec-collection_matchers'
+gem 'rspec-its'
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
@@ -48,6 +50,7 @@ group :development, :test do
   gem 'web-console', '~> 2.0'
   gem 'rspec-rails',      ">= 2.0.0.beta"
   gem 'factory_girl_rails'
+  gem 'shoulda-matchers'
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
 end
