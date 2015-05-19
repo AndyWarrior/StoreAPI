@@ -1,6 +1,6 @@
 FactoryGirl.define do
 
-    factory :products do
+    factory :product do
         name 'PlayStation 3'
         description 'Esta es la descripcion del producto'
         price 130.00
@@ -11,7 +11,6 @@ FactoryGirl.define do
     factory :user do
         email "mail@gmail.com"
         password "12345678"
-        name "Don Mail"
         budget 1000
     end
 
